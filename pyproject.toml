@@ -1,0 +1,29 @@
+[build-system]
+requires = [
+  "setuptools>=61.0",
+  "wheel",
+]
+
+[project]
+name = "darm"
+version = "0.1.0"
+description = "D-ARM: ARM disassembler"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "capstone==4.0.2",
+  "certifi==2021.5.30",
+  "joblib==1.1.1",
+  "numpy",
+  "scikit-learn==0.24.2",
+  "scipy==1.5.4",
+  "threadpoolctl==3.1.0",
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = [
+  "darm",
+]
