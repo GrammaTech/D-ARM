@@ -89,7 +89,7 @@ class ARMBinary:
         return ARMBinary.to_hex2(x)
 
     def check_arch(self):
-        cmd = "utils/arm-linux-gnueabi-readelf -h " + self.path
+        cmd = "arm-linux-gnueabihf-readelf -h " + self.path
         output = subprocess.check_output(cmd, shell=True)
         output = output.decode("ISO-8859-1")
 
@@ -144,7 +144,7 @@ class ARMBinary:
         """
         Get the ARM binary's ELF information and where the text section is
         """
-        cmd = "utils/arm-linux-gnueabi-readelf -S " + self.path
+        cmd = "arm-linux-gnueabihf-readelf -S " + self.path
         output = subprocess.check_output(cmd, shell=True)
         output = output.decode("ISO-8859-1")
         # print(output)
@@ -206,7 +206,7 @@ class ARMBinary:
         Get the ARM mapping symbols
         """
         # self.is_stripped = True
-        cmd = "utils/arm-linux-gnueabi-readelf -s " + self.path
+        cmd = "arm-linux-gnueabihf-readelf -s " + self.path
         output = subprocess.check_output(cmd, shell=True)
         output = output.decode("ISO-8859-1")
         # print(output)

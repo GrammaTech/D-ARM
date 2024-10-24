@@ -22,7 +22,7 @@ import os
 import struct
 from collections import defaultdict
 
-from binary import ARMBinary
+from .binary import ARMBinary
 from capstone import *
 from capstone.arm import *
 from capstone.arm64 import *

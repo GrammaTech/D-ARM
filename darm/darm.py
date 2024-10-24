@@ -15,8 +15,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 import argparse
-from disassembler import ARMDisassembler
-from binary import ARMBinary
+from .disassembler import ARMDisassembler
+from .binary import ARMBinary
 import resource
 import sys
 import subprocess
